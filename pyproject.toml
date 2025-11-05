@@ -1,0 +1,50 @@
+# PEP 621 Project Core Metadata
+# https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
+[project]
+name = "shell-pilot"
+version = "0.1.0"
+description = "A lightweight, command-line AI coding agent powered by Google's Gemini."
+readme = "README.md"
+authors = [
+  { name="Ege Kemal Germen", email="egekemalgermen@gmail.com" },
+]
+
+license = "MIT"
+
+# Compatible with Python 3.8 and newer versions.
+requires-python = ">=3.9"
+
+# Standardized classifiers for package discovery.
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Terminals",
+]
+
+# Core project dependencies.
+dependencies = [
+    "google-genai==1.12.1",
+    "python-dotenv==1.1.0",
+]
+
+# Relevant project links.
+[project.urls]
+Homepage = "https://github.com/Syntria/shell-pilot"
+"Bug Tracker" = "https://github.com/Syntria/shell-pilot/issues"
+
+# Entry Points
+[project.scripts]
+shell-pilot = "src.main:main"
+sp = "src.main:main"
+
+# Build system configuration (PEP 517).
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+# Include functions when building
+[tool.setuptools]
+packages = ["src", "src.functions"]
