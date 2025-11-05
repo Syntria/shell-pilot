@@ -50,10 +50,6 @@ This project is a proof-of-concept and a learning tool. It does **not** have all
 
 The script is run from the command line, taking a prompt in quotes as its main argument.
 
-### Verbose Mode
-
-For transparency, you can use the `--verbose` (or `-v`) flag after the prompt to see the token usage.
-
 ### Example: Fixing a Bug
 
 Shell Pilot can be used to diagnose and fix bugs in your code.
@@ -62,3 +58,16 @@ You can instruct Shell Pilot to fix it with a single prompt:
 
 ```bash
 sp "fix the bug: 3 + 7 * 2 shouldn't be 20"
+```
+
+
+
+
+https://github.com/user-attachments/assets/0afaf6be-d124-47b9-b87c-bdae856dd682
+
+
+
+
+### Verbose Mode
+
+For transparency, you can use the `--verbose` (or `-v`) flag after the prompt to see the token usage.
