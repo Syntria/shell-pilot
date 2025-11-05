@@ -8,6 +8,8 @@ This project is a proof-of-concept and a learning tool. It does **not** have all
 
 **Use this tool with precaution.** It is best suited for small, trusted projects. Do not run it in an environment with sensitive data. The user is responsible for all actions performed by the agent.
 
+**Shell Pilot operates directly within your current terminal directory.** For your safety and to prevent unintended actions, **always ensure you are in the intended project directory** before invoking `shell-pilot`.
+
 ## Features
 
 - **Natural Language Interface:** Interact with your file system using plain English.
@@ -37,6 +39,7 @@ This project is a proof-of-concept and a learning tool. It does **not** have all
     *(This command reads the `pyproject.toml` file and installs the necessary packages.)*
 
 4.  **Set up your API Key:**
+    - Go to https://aistudio.google.com/app/api-keys and create a API key
     - Create a `.env` file in the root of the project.
     - Add your Gemini API key to the file:
       ```
@@ -49,7 +52,7 @@ The script is run from the command line, taking a prompt in quotes as its main a
 
 ### Verbose Mode
 
-For debugging and transparency, you can use the `--verbose` (or `-v`) flag to see the agent's step-by-step actions. This will display the exact function calls the model is planning and the raw results it receives from those calls.
+For transparency, you can use the `--verbose` (or `-v`) flag after the prompt to see the agent's step-by-step actions. This will display the token usage and raw results it receives from API calls.
 
 ### Example: Fixing a Bug
 
@@ -58,4 +61,4 @@ Shell Pilot can be used to diagnose and fix bugs in your code.
 You can instruct Shell Pilot to fix it with a single prompt:
 
 ```bash
-python main.py "fix the bug: 3 + 7 * 2 shouldn't be 20"
+sp "fix the bug: 3 + 7 * 2 shouldn't be 20"
