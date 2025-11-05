@@ -52,7 +52,7 @@ The script is run from the command line, taking a prompt in quotes as its main a
 
 ### Verbose Mode
 
-For transparency, you can use the `--verbose` (or `-v`) flag after the prompt to see the agent's step-by-step actions. This will display the token usage and raw results it receives from API calls.
+For transparency, you can use the `--verbose` (or `-v`) flag after the prompt to see the token usage.
 
 ### Example: Fixing a Bug
 
